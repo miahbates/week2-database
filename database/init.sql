@@ -1,44 +1,41 @@
--- Start a "transaction"
--- if any of the commands inside fail
--- the entire transaction is rolled back
--- so your DB is never left is a half-broken state
 BEGIN;
 
--- Delete existing tables
--- also "cascade" to delete any relations
-DROP TABLE IF EXISTS users, blog_posts CASCADE;
+
+DROP TABLE IF EXISTS users, user_facts CASCADE;
 
 -- Create tables and define their columns
 
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
-  username VARCHAR(255) NOT NULL,
-  age INTEGER
+  first_name VARCHAR(100) NOT NULL,
+  cohort VARCHAR(6)
+
 );
 
-CREATE TABLE blog_posts (
+CREATE TABLE user_facts (
   id SERIAL PRIMARY KEY,
   user_id INTEGER REFERENCES users(id),
-  text_content TEXT
+  facts TEXT
 );
 
 -- Insert some example data for us to test with
 
-INSERT INTO users (username, age) VALUES
-  ('Sery1976', 28),
-  ('Notne1991', 3),
-  ('Moull1990', 41),
-  ('Spont1935', 72),
-  ('Precand', 19)
+INSERT INTO users (first_name, cohort) VALUES
+  ('Oli', 'FAC23'),
+  ('Milly', 'FAC23'),
+  ('Miah', 'FAC23'),
+  ('Adam', 'FAC23'),
+  ('Anna', 'FAC22')
 ;
 
-INSERT INTO blog_posts (text_content, user_id) VALUES
-  ('Announcing of invitation principles in.', 1),
-  ('Peculiar trifling absolute and wandered yet.', 2),
-  ('Far stairs now coming bed oppose hunted become his.', 3),
-  ('Curabitur arcu quam, imperdiet ac orci ac.', 4),
-  ('Aenean blandit risus sed pellentesque.', 5)
+INSERT INTO user_facts (facts, user_id) VALUES
+  ('I am a secret millionaire', 1),
+  ('I know kung fu', 2),
+  ('I have never seen Friends', 3),
+  ('I cannot ride a bike', 4),
+  ('I still have my xmas tree up!', 5
+
 ;
 
--- End the transaction and commit all changes
+
 COMMIT;

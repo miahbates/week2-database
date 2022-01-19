@@ -1,3 +1,7 @@
+beforeEach(() => {
+  cy.task("resetDb");
+});
+
 // test for landing on homepage
 it("can find homepage", () => {
   cy.visit("/");

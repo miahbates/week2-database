@@ -6,5 +6,5 @@ it("can find homepage", () => {
 // check title of landing page
 it("can find title on home page", () => {
   cy.visit("/");
-  cy.get("h1").contains("Project Set-up");
+  cy.get("h1").contains("Who-said-it");
 });

@@ -33,7 +33,7 @@ INSERT INTO user_facts (facts, user_id) VALUES
   ('I know kung fu', 2),
   ('I have never seen Friends', 3),
   ('I cannot ride a bike', 4),
-  ('I still have my xmas tree up!', 5
+  ('I still have my xmas tree up!', 5)
 
 ;
 

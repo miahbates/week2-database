@@ -23,7 +23,7 @@ it("can fill out username, personal fact and cohort (from drop down)", () => {
   cy.visit("/");
   cy.get("form").find("input[name='first_name']").type("Gregor");
   cy.get("form")
-    .find("input[name='facts']")
+    .find("textarea[name='facts']")
     .type("I once won a tea drinking competition");
   cy.get("form").find("input[type='submit']").click();
   cy.url().should("include", "/");

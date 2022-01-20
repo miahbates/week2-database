@@ -21,25 +21,6 @@ server.get("/", (request, response) => {
   response.send(html);
 });
 
-// const select_posts = /*sql*/ `
-//     SELECT blog_posts.text_content, users.username
-//     FROM blog_posts INNER JOIN users
-//     ON blog_posts.user_id = users.id
-//     ORDER BY blog_posts.id DESC
-//   `;
-// db.query(select_posts).then((result) => {
-//   const posts = result.rows;
-//   const postItems = posts.map((post) => {
-//     return /*html*/ `
-//         <li>
-//          <p>${post.text_content}</p>
-//          <p>${post.username}</p>
-//         </li>
-//       `;
-//   });
-//   response.send(`<ul>${postItems.join("")}</ul>`);
-// });
-
 const fakeUsers = [
   {
     firstname: "Gregor",
@@ -50,6 +31,25 @@ const fakeUsers = [
 ];
 
 server.get("/display_facts", (request, response) => {
+  // const select_posts = /*sql*/ `
+  //     SELECT blog_posts.text_content, users.username
+  //     FROM blog_posts INNER JOIN users
+  //     ON blog_posts.user_id = users.id
+  //     ORDER BY blog_posts.id DESC
+  //   `;
+  // db.query(select_posts).then((result) => {
+  //   const posts = result.rows;
+  //   const postItems = posts.map((post) => {
+  //     return /*html*/ `
+  //         <li>
+  //          <p>${post.text_content}</p>
+  //          <p>${post.username}</p>
+  //         </li>
+  //       `;
+  //   });
+  //   response.send(`<ul>${postItems.join("")}</ul>`);
+  // });
+
   console.log(db);
 
   let list = "";

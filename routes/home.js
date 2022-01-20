@@ -26,14 +26,13 @@ function homePage(request, response) {
 // allows us to access info from the request.body to retrieve input values.
 function addFact(request, response) {
   console.log(request.body);
-  const name = request.body.name;
+  const firstName = request.body.first_name;
   const cohort = request.body.cohort;
   const facts = request.body.facts;
   
 // call function from model.js file
-  sendFacts(name, cohort, facts).then(response => {
-    console.log('facts added');
-  });
+  sendFacts(firstName, cohort, facts);
+  response.redirect("/");
 }
 
 const form = `<form method="POST">

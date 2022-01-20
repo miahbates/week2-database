@@ -8,6 +8,11 @@ describe("homepage tests", () => {
     cy.visit("/");
   });
 
+  it("will serve error page", () => {
+    cy.visit("/jgshghjao");
+    cy.contains("error");
+  });
+
   // check title of landing page
   it("can find title on home page", () => {
     cy.visit("/");
@@ -35,4 +40,6 @@ describe("homepage tests", () => {
     cy.visit("/display_facts");
     cy.get("body").find("li").contains("Gregor");
   });
+
 });
+

@@ -7,6 +7,7 @@ function homePage(request, response) {
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./index.css">
         <link rel="icon" type="image/png" href="/moonet-logo.png" />
         <title>Document</title>
       </head>
@@ -20,13 +21,13 @@ function homePage(request, response) {
   };
 
   const form = `<form method="POST">
-  <label for="name">Name</label>
-  <input required id="name" type="text" name="name" />
+  <label for="first_name">Name</label>
+  <input required id="first_name" type="text" name="first_name" />
   <label for="cohort">Cohort</label>
   <input required id="cohort" type="number" name="cohort" />
-  <label for="fact">Fact</label>
-  <textarea required id="fact" type="text" name="fact"></textarea>
-  <input required value="fact" type="submit" />
+  <label for="facts">Fact</label>
+  <textarea required id="facts" type="text" name="facts"></textarea>
+  <input required value="facts" type="submit" />
 </form>`
 
   module.exports = {homePage}

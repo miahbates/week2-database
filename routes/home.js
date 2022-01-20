@@ -1,6 +1,9 @@
+const db = require("../database/connection.js");
+const { sendFacts } = require("../database/model.js");
 
+// render form on the homepage
 function homePage(request, response) {
-    const html = `
+  const html = `
     <!DOCTYPE html>
       <html lang="en">
       <head>
@@ -16,11 +19,24 @@ function homePage(request, response) {
         ${form}
       </body>
       </html>`;
-  
-    response.send(html);
-  };
+  response.send(html);
+};
 
-  const form = `<form method="POST">
+// body parser give info from add fact function
+// allows us to access info from the request.body to retrieve input values.
+function addFact(request, response) {
+  console.log(request.body);
+  const name = request.body.name;
+  const cohort = request.body.cohort;
+  const facts = request.body.facts;
+  
+// call function from model.js file
+  sendFacts(name, cohort, facts).then(response => {
+    console.log('facts added');
+  });
+}
+
+const form = `<form method="POST">
   <label for="first_name">Name</label>
   <input required id="first_name" type="text" name="first_name" />
   <label for="cohort">Cohort</label>
@@ -28,6 +44,6 @@ function homePage(request, response) {
   <label for="facts">Fact</label>
   <textarea required id="facts" type="text" name="facts"></textarea>
   <input required value="facts" type="submit" />
-</form>`
+</form>`;
 
-  module.exports = {homePage}
+module.exports = {homePage, addFact};

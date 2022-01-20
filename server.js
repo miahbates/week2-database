@@ -8,7 +8,21 @@ const staticHandler = express.static("public");
 
 server.use(staticHandler);
 
+// add in body paser..
+const bodyParser = express.urlencoded();
+
 server.get("/", home.homePage);
+
+// make a post request to log when form is submitted that posted console.logs
+
+// server.post("/", (request, response) => {
+//   console.log("posted");
+// });
+
+// won't get access to body without body parser
+// server.post("/", home.addFact);
+
+server.post("/", bodyParser, home.addFact);
 
 const fakeUsers = [
   {

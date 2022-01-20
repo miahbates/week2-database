@@ -11,7 +11,9 @@ function displayFacts(request, response) {
     let list = "";
     const dbResponse = result.rows;
     dbResponse.forEach((user) => {
-      list += `<li><div class="card"><span class="toHide">${user.first_name}</span><span>${user.facts}</span></div></li>`;
+      list += `<li><div class="container"><div class="card"><div class="front">${user.facts}</div><div class="back">${user.first_name}</div></div></div></li>`;
+
+
     });
 
     const html = `
@@ -21,26 +23,23 @@ function displayFacts(request, response) {
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="./display.css">
         <title>Display</title>
       </head>
       <body>
-        <h1>Cohort facts</h1>
+        <h1>FAC cohort facts</h1>
+        <p>Can you guess who said that? Hover over the fact to find out!</p>
         <ul>${list}</ul>
       </body>
-      <script>
-      const hideItems = document.querySelectorAll(".toHide");
-
-      hideItems.forEach((item) =>
-        item.addEventListener("click", (event) => {
-          event.target.style.display = "none";
-        })
-      );
-      
-      </script>
-      </html>`;
+    </html>`;
 
     response.send(html);
   });
 }
 
 module.exports = { displayFacts };
+
+

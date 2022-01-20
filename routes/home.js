@@ -17,6 +17,7 @@ function homePage(request, response) {
       <body>
         <h1>Who-said-that</h1>
         ${form}
+        <a href="/display_facts">View All Facts</a>
       </body>
       </html>`;
   response.send(html);
@@ -31,7 +32,7 @@ function addFact(request, response) {
 
   // call function from model.js file
   sendFacts(firstName, cohort, facts);
-  response.redirect("/display_facts");
+  response.redirect("/");
 }
 
 const form = `<form method="POST">

@@ -39,3 +39,4 @@ INSERT INTO user_facts (facts, user_id) VALUES
 
 
 COMMIT;
+

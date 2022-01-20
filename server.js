@@ -2,24 +2,13 @@ const express = require("express");
 //initialise db object
 const db = require("./database/connection.js");
 const server = express();
+const home = require("./routes/home.js");
 
-server.get("/", (request, response) => {
-  const html = `
-  <!DOCTYPE html>
-    <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Document</title>
-    </head>
-    <body>
-      <h1>Project Set-up </h1>
-    </body>
-    </html>`;
+const staticHandler = express.static("public");
 
-  response.send(html);
-});
+server.use(staticHandler);
+
+server.get("/", home.homePage);
 
 const fakeUsers = [
   {

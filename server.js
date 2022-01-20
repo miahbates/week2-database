@@ -9,6 +9,9 @@ const staticHandler = express.static("public");
 
 server.use(staticHandler);
 
+// add in body paser..
+const bodyParser = express.urlencoded();
+
 server.get("/", home.homePage);
 
 server.get("/display_facts", display.displayFacts);

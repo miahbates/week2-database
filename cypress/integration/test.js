@@ -40,4 +40,6 @@ describe("homepage tests", () => {
     cy.visit("/display_facts");
     cy.get("body").find("li").contains("Gregor");
   });
+
 });
+

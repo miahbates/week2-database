@@ -10,15 +10,6 @@ server.use(staticHandler);
 
 server.get("/", home.homePage);
 
-const fakeUsers = [
-  {
-    firstname: "Gregor",
-    fact: "I once won a tea drinking competition",
-    cohort: "Fac17",
-  },
-  { firstname: "Reuben", fact: "I once met Madonna", cohort: "Fac19" },
-];
-
 server.get("/display_facts", (request, response) => {
   const select_userInfo = /*sql*/ `
     SELECT facts, first_name 

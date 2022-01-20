@@ -20,19 +20,18 @@ function homePage(request, response) {
       </body>
       </html>`;
   response.send(html);
-};
+}
 
 // body parser give info from add fact function
 // allows us to access info from the request.body to retrieve input values.
 function addFact(request, response) {
-  console.log(request.body);
   const firstName = request.body.first_name;
   const cohort = request.body.cohort;
   const facts = request.body.facts;
-  
-// call function from model.js file
+
+  // call function from model.js file
   sendFacts(firstName, cohort, facts);
-  response.redirect("/");
+  response.redirect("/display_facts");
 }
 
 const form = `<form method="POST">
@@ -45,4 +44,4 @@ const form = `<form method="POST">
   <input required value="facts" type="submit" />
 </form>`;
 
-module.exports = {homePage, addFact};
+module.exports = { homePage, addFact };

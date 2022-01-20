@@ -16,6 +16,8 @@ server.get("/", home.homePage);
 
 server.get("/display_facts", display.displayFacts);
 
+server.post("/", bodyParser, home.addFact);
+
 server.use(errorPage.error);
 
 const PORT = 3333;

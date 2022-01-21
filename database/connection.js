@@ -11,6 +11,9 @@ console.log(process.env.DATABASE_URL);
 // Connect to the database
 // and create a pool of available connections to support simultaneous requests
 const db = new Pool({
+  ssl: {
+    rejectUnauthorized: false
+  },
   connectionString: process.env.DATABASE_URL,
 });
 

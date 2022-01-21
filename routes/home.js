@@ -29,9 +29,9 @@ function homePage(request, response) {
 // body parser give info from add fact function
 // allows us to access info from the request.body to retrieve input values.
 function addFact(request, response) {
-  const firstName = request.body.first_name;
-  const cohort = request.body.cohort;
-  const facts = request.body.facts;
+  const firstName = request.body.first_name.replace(/>/g, "&lt;");
+  const cohort = request.body.cohort.replace(/>/g, "&lt;");
+  const facts = request.body.facts.replace(/>/g, "&lt;");
 
   // call function from model.js file
   sendFacts(firstName, cohort, facts);

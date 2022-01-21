@@ -8,9 +8,12 @@ describe("homepage tests", () => {
     cy.visit("/");
   });
 
-  it("will serve error page", () => {
-    cy.visit("/jgshghjao");
-    cy.contains("error");
+  it("404 if page not found", () => {
+    cy.request({ url: "/hwwfnjnjwfwj", failOnStatusCode: false }).should(
+      (response) => {
+        expect(response.status).to.eq(404);
+      }
+    );
   });
 
   // check title of landing page
@@ -26,20 +29,42 @@ describe("homepage tests", () => {
     cy.get("h1").contains("Cohort facts");
   });
 
-  it("can fill out username, personal fact and cohort (from drop down)", () => {
+  it("can fill out username, personal fact and cohort, page redirects to home", () => {
     cy.visit("/");
     cy.get("form").find("input[name='first_name']").type("Gregor");
     cy.get("form")
       .find("textarea[name='facts']")
       .type("I once won a tea drinking competition");
+    cy.get("form").find("input[name='cohort']").type("16");
     cy.get("form").find("input[type='submit']").click();
     cy.url().should("include", "/");
   });
 
-  it("can view facts about other people", () => {
-    cy.visit("/display_facts");
-    cy.get("body").find("li").contains("Gregor");
+  it("newly submitted fact is displayed on display_facts page", () => {
+    cy.visit("/");
+    cy.get("form").find("input[name='first_name']").type("Reuben");
+    cy.get("form")
+      .find("textarea[name='facts']")
+      .type("I met Madonna at Legoland");
+    cy.get("form").find("input[name='cohort']").type("17");
+    cy.get("form").find("input[type='submit']").click();
+    cy.wait(2000);
+    cy.get("a").click();
+    cy.url().should("include", "/display_facts");
+    cy.contains("I met Madonna at Legoland");
   });
 
+  it("script tags do not get rendered on page", () => {
+    cy.visit("/");
+    cy.get("form").find("input[name='first_name']").type("Reuben");
+    cy.get("form")
+      .find("textarea[name='facts']")
+      .type("<script src='badstuff'></script>");
+    cy.get("form").find("input[name='cohort']").type("17");
+    cy.get("form").find("input[type='submit']").click();
+    cy.wait(2000);
+    cy.get("a").click();
+    cy.url().should("include", "/display_facts");
+    cy.contains('<script src="badstuff"></script>').should("not.exist");
+  });
 });
-

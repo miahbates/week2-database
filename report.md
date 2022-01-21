@@ -4,6 +4,9 @@
 
 Our idea is to create a database app where people can post their own random questions or facts about themselves to the home page and the names of who posted what will be hidden on another page with the name, FAC cohort (id as number) information by a reveal button as a starting point. 
 
+## User stories
+
+As a user, I want to: submit information to your site for anyone to see As a user, I want to: come back to your site later and see what I posted is still there
 
 ## Team members and roles
 
@@ -23,8 +26,9 @@ Our idea is to create a database app where people can post their own random ques
 + Deployment to Heroku
 + Home button 
 + Keyboard focusable on the fact cards
++ Display FAC cohort
 
-## Strech goals
+## Stretch goals
 + Add quiz game element 
 
 ## Who to contact if any private keys are required to run the project?

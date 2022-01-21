@@ -12,8 +12,6 @@ function displayFacts(request, response) {
     const dbResponse = result.rows;
     dbResponse.forEach((user) => {
       list += `<li><div class="container"><div class="card"><div class="front">${user.facts}</div><div class="back">${user.first_name}</div></div></div></li>`;
-
-
     });
 
     const html = `
@@ -41,5 +39,3 @@ function displayFacts(request, response) {
 }
 
 module.exports = { displayFacts };
-
-

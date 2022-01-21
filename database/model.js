@@ -11,10 +11,10 @@ function sendFacts(firstName, cohort, facts) {
 
   const userInfo = [firstName, cohort];
 
-  db.query(query1, userInfo).then((queryRes) => {
+  return db.query(query1, userInfo).then((queryRes) => {
     const id = queryRes.rows[0].id;
     const userFact = [id, facts];
-    db.query(query2, userFact);
+    return db.query(query2, userFact);
   });
 }
 

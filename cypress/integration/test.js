@@ -20,13 +20,13 @@ describe("homepage tests", () => {
   it("can find title on home page", () => {
     cy.visit("/");
 
-    cy.get("h1").contains("Who-said-that");
+    cy.get("h1").contains("Who Said That?");
   });
 
   //check title of cohort facts page
   it("can find title on facts page", () => {
     cy.visit("/display_facts");
-    cy.get("h1").contains("Cohort facts");
+    cy.get("h1").contains("FAC cohort facts");
   });
 
   it("can fill out username, personal fact and cohort, page redirects to home", () => {

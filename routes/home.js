@@ -34,8 +34,9 @@ function addFact(request, response) {
   const facts = request.body.facts.replace(/>/g, "&lt;");
 
   // call function from model.js file
-  sendFacts(firstName, cohort, facts);
-  response.redirect("/");
+  sendFacts(firstName, cohort, facts).then(() => {
+    response.redirect("/");
+  });
 }
 
 const form = `<form method="POST">

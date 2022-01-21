@@ -15,6 +15,11 @@ As a user, I want to: submit information to your site for anyone to see As a use
 + User Experience - Milly
 + Scrum Facilitator - Adam
 
+## Issue management
+
++ Reading/Writing to database and deploying took 3-5 times longer than expected
++ Tests, basic UI, CSS styling and planning ran to time
+
 ## How to install
 + Git clone https://github.com/fac-23/week2-database
 + Run command `npm install` in terminal.

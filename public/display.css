@@ -1,85 +1,85 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    font-family: 'Cabin', sans-serif;
-
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Cabin", sans-serif;
 }
 
 body {
-    background: rgb(237,202,121);
-    background: radial-gradient(circle, rgb(241, 215, 154) 17%, rgb(250, 218, 208) 77%);
+  background: rgb(237, 202, 121);
+  background: radial-gradient(
+    circle,
+    rgb(241, 215, 154) 17%,
+    rgb(250, 218, 208) 77%
+  );
 }
 
-h1 { 
-    font-size: 2rem;
-    color:#0686f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0.5rem;
-    margin: 1rem;
-} 
+h1 {
+  font-size: 2rem;
+  color: #0686f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0.5rem;
+  margin: 1rem;
+}
 
 p {
-    font-size: 1rem;
-    color:#0686f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0.5rem;
-    margin: 1rem;  
+  font-size: 1rem;
+  color: #0686f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0.5rem;
+  margin: 1rem;
 }
 
 .card {
-    width: 80px;
-    height: 80px;
-    transition: all 1s linear;
-    transform-style: preserve-3d;
-    margin: 0.5rem;
-
+  width: 80px;
+  height: 80px;
+  transition: all 1s linear;
+  transform-style: preserve-3d;
+  margin: 0.5rem;
 }
 
-.front, 
+.front,
 .back {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.8rem;
-    text-align: center;
-    font-family: 'Cabin', sans-serif;
-    border-radius: 10px;
-    position: absolute;
-    padding: 0.5rem;
-
-    }
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  text-align: center;
+  font-family: "Cabin", sans-serif;
+  border-radius: 10px;
+  position: absolute;
+  padding: 0.5rem;
+}
 
 .front {
-    background: linear-gradient(#869bf7, #a37aee);
-    z-index: 2;
-    backface-visibility: hidden;
-    }
+  background: linear-gradient(#869bf7, #a37aee);
+  z-index: 2;
+  backface-visibility: hidden;
+}
 
 .back {
-    background: linear-gradient(#ec9e28, #f76363);
-    z-index: 1;
-    transform: rotateY(180deg);
+  background: linear-gradient(#ec9e28, #f76363);
+  z-index: 1;
+  transform: rotateY(180deg);
 }
 
 .container:hover .card {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .container {
-    perspective: 1000px;
-    display: flex;
-    justify-content: center;
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
 }
 
 ul {
-    list-style-type: none;
-
+  list-style-type: none;
 }

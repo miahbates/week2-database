@@ -20,7 +20,7 @@ server.post("/", bodyParser, home.addFact);
 
 server.use(errorPage.error);
 
-const PORT = 3333;
+const PORT = process.env.PORT || 3333;
 
 server.listen(PORT, () => {
   console.log(`listening on http://localhost:${PORT}`);

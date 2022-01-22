@@ -28,8 +28,9 @@ function displayFacts(request, response) {
         <title>Display</title>
       </head>
       <body>
-        <h1>FAC cohort facts</h1>
+        <h1>Fun Facts</h1>
         <p>Can you guess who said that? Hover over the fact to find out!</p>
+        <a href="/">Return to Home Page</a>
         <ul>${list}</ul>
       </body>
     </html>`;

@@ -17,7 +17,7 @@ Our idea is to create a database app where people can post their own random ques
 - Run command `npm install` in terminal.
 - Start sever run command `npm run dev`.
 - Run cypress testing run command `npm run test`.
-- Or can access locally on _[localhost:3000](http://localhost:3333/)_
+- Or can access locally on _[localhost:3333](http://localhost:3333/)_
 
 ## User Stories :busts_in_silhouette:
 

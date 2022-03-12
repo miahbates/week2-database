@@ -44,23 +44,23 @@ _[Deployed version here!](https://whosaidthat4.herokuapp.com/)_
 * Deployed on heroku.
 
 ## Learning 🌱
-- [x] We can design and document a database schema.
-- [x] We can normalize our data to reduce duplication.
-- [x] We can create a relational database.
-- [x] We can create tables within the database.
-- [x] We can link a record in one table to a record in another.
-- [x] We can link a record in one table to multiple records in another.
-- [x] We can link multiple records in one table to multiple records in another.
-- [x] We can deploy a PSQL database locally on our own machine.
-- [x] We can deploy a PSQL database to a live server.   
-- [x] We can set up separate environments for production and testing.
-- [x] We can use PSQL to manage Postgres from the command line.
-- [x] We can create, read update and delete from our database using SQL queries.
-- [x] We can sort and filter data using SQL queries.
-- [x] We can use joins to access related data in different tables.
-- [x] We can use query parameters to avoid SQL-injection vulnerabilities.
-- [x] We can handle database errors on our server without crashing.
-- [x] We can follow a consistent pattern for naming our folders, files and variables.
+* We can design and document a database schema.
+- We can normalize our data to reduce duplication.
+- We can create a relational database.
+- We can create tables within the database.
+- We can link a record in one table to a record in another.
+- We can link a record in one table to multiple records in another.
+- We can link multiple records in one table to multiple records in another.
+- We can deploy a PSQL database locally on our own machine.
+- We can deploy a PSQL database to a live server.   
+- We can set up separate environments for production and testing.
+- We can use PSQL to manage Postgres from the command line.
+- We can create, read update and delete from our database using SQL queries.
+- We can sort and filter data using SQL queries.
+- We can use joins to access related data in different tables.
+- We can use query parameters to avoid SQL-injection vulnerabilities.
+- We can handle database errors on our server without crashing.
+- We can follow a consistent pattern for naming our folders, files and variables.
 
 ## Improvements and future ideas ✨
 - Add validation to form to allow only number input for cohort.

@@ -1,55 +1,69 @@
-# Who said that ❔ 🥸
+# [Founders and Coders](https://www.foundersandcoders.com/) (appenticeship) 
 
-_[Deployed version here!](https://whosaidthat4.herokuapp.com/)_ ✨
+## Who said that❓
 
-Our idea is to create a database app where people can post their own random questions or facts about themselves to the home page and the names of who posted what will be hidden on another page with the name, FAC cohort (id as number) information by a reveal button as a starting poin
+*Co-authored with [Adam](https://github.com/adam8-9), [Milly](https://github.com/millipede-cpu) and [Oli](https://github.com/duckRabbitPy).*
 
-# Team 1 Roles
+Our idea is to create a database app where people can post their own random questions or facts about themselves to the home page. The names of who posted a fact will be able to be revealed on another page.
 
-- DevOps - Miah
-- Quality Assurance - Oli
-- User Experience - Milly
-- Scrum Facilitator - Adam
+_[Deployed version here!](https://whosaidthat4.herokuapp.com/)_
 
-## How to install
+## Team members
+- Adam - Scrum Facilitator.
+- Miah - DevOps.
+- Oli - Quality Assurance.
+- Milly - User Experience.
 
-- Git clone `https://github.com/fac-23/week2-database`
+## How to install 🛠️
+- Git clone `https://github.com/miahbates/microblog`
 - Run command `npm install` in terminal.
 - Start sever run command `npm run dev`.
 - Run cypress testing run command `npm run test`.
 - Or can access locally on _[localhost:3333](http://localhost:3333/)_
 
 ## User Stories :busts_in_silhouette:
-
-As a user, I want to: submit information to your site for anyone to see
-As a user, I want to: come back to your site later and see what I posted is still there
-
-### Core ✨
-
--[x]A form for users to submit data
--[x] A page showing all the data
--[x] Semantic form elements with correctly associated labels
--[ ] A Postgres database hosted on Heroku
--[x] A schema describing your database in your README
--[x] Tests for server routes and database access
--[x] Not process user input as SQL commands
--[x] Hidden environment variables (i.e. not on GitHub)
-
+### Core
+- [x] As a user, I want to: submit information to your site for anyone to see
+- [x] As a user, I want to: come back to your site later and see what I posted is still there
+- [x] A form for users to submit data
+- [x] A page showing all the data
+- [x] Semantic form elements with correctly associated labels
+- [x] A Postgres database hosted on Heroku
+- [x] A schema describing your database in your README
+- [x] Tests for server routes and database access
+- [x] Not process user input as SQL commands
+- [x] Hidden environment variables (i.e. not on GitHub)
 ### Stretch :seedling:
+- [ ] A way to view filtered/sorted data, instead of just all of it
+- [ ] GitHub Actions CI setup to run your tests when you push
 
--[ ] A way to view filtered/sorted data, instead of just all of it
--[ ] GitHub Actions CI setup to run your tests when you push
+## Features: 🌟
+* Able to add a fact.
+* Able to view other members facts and reveal who said them.
+* Easily naviagte between pages.
+* Deployed on heroku.
 
-##
+## Learning 🌱
+- [x] We can design and document a database schema.
+- [x] We can normalize our data to reduce duplication.
+- [x] We can create a relational database.
+- [x] We can create tables within the database.
+- [x] We can link a record in one table to a record in another.
+- [x] We can link a record in one table to multiple records in another.
+- [x] We can link multiple records in one table to multiple records in another.
+- [x] We can deploy a PSQL database locally on our own machine.
+- [x] We can deploy a PSQL database to a live server.   
+- [x] We can set up separate environments for production and testing.
+- [x] We can use PSQL to manage Postgres from the command line.
+- [x] We can create, read update and delete from our database using SQL queries.
+- [x] We can sort and filter data using SQL queries.
+- [x] We can use joins to access related data in different tables.
+- [x] We can use query parameters to avoid SQL-injection vulnerabilities.
+- [x] We can handle database errors on our server without crashing.
+- [x] We can follow a consistent pattern for naming our folders, files and variables.
 
-What we learn't
--
--
--
-
-##
-
-Future improvements
--
--
--
+## Improvements and future ideas ✨
+- Add validation to form to allow only number input for cohort.
+- When submiting fact, redirect to page wit all facts.
+- Improve css hover to ensure only 1 card is revealed.
+- Delete facts.

@@ -15,11 +15,11 @@ _[Deployed version here!](https://whosaidthat4.herokuapp.com/)_
 - Milly - User Experience.
 
 ## How to install 🛠️
-- Git clone `https://github.com/miahbates/microblog`
+- Git clone `https://github.com/miahbates/who-said-that`
 - Run command `npm install` in terminal.
 - Start sever run command `npm run dev`.
 - Run cypress testing run command `npm run test`.
-- Or can access locally on _[localhost:3333](http://localhost:3333/)_
+- Or can access locally on [localhost:3333](http://localhost:3333/)_
 
 ## User Stories :busts_in_silhouette:
 ### Core

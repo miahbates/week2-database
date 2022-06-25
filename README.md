@@ -8,6 +8,8 @@ Our idea is to create a database app where people can post their own random ques
 
 _[Deployed version here!](https://whosaidthat4.herokuapp.com/)_
 
+<img width="1269" alt="Screenshot 2022-06-25 at 21 18 23" src="https://user-images.githubusercontent.com/78933903/175789342-933ede30-f8c1-4f40-a4c9-5d007ca9b6a7.png">
+
 ## Team members
 - Adam - Scrum Facilitator.
 - Miah - DevOps.
